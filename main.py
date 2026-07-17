@@ -672,7 +672,7 @@ class BasePage(QWidget):
 
 class DashboardPage(BasePage):
     def __init__(self):
-        super().__init__("Financial Performance Dashboard", "A real-time overview of your budget, spending velocity, and savings rate.")
+        super().__init__("Financial Performance Dashboard", "A real-time overview of your budget, spending, and savings rate!")
         self.init_ui()
 
     def init_ui(self):
@@ -793,7 +793,7 @@ class DashboardPage(BasePage):
 
 class IncomePage(BasePage):
     def __init__(self):
-        super().__init__("Income Directory", "Manage and audit all internal and revenue streams.")
+        super().__init__("My Earnings", "Track where your money comes from!")
         self.init_ui()
 
     def init_ui(self):
@@ -851,7 +851,7 @@ class IncomePage(BasePage):
     def refresh(self):
         try:
             balances = database.calculate_current_balances()
-            self.lbl_total.setText(f"Total Registered Income: ${balances['total_income']:,.2f}")
+            self.lbl_total.setText(f"Total Income: ${balances['total_income']:,.2f}")
             
             txs = [t for t in database.fetch_all_transactions() if t['type'] == 'income']
             
@@ -890,7 +890,7 @@ class IncomePage(BasePage):
 
 class ExpensesPage(BasePage):
     def __init__(self):
-        super().__init__("Expenses Register", "Record, sort, filter, and organize custom transactional payments.")
+        super().__init__("My spending", "Keep track of every dollar you spend!")
         self.init_ui()
 
     def init_ui(self):
@@ -948,7 +948,7 @@ class ExpensesPage(BasePage):
     def refresh(self):
         try:
             balances = database.calculate_current_balances()
-            self.lbl_total.setText(f"Total Monthly Outflow: ${balances['total_expenses']:,.2f}")
+            self.lbl_total.setText(f"Total Spending: ${balances['total_expenses']:,.2f}")
             
             txs = [t for t in database.fetch_all_transactions() if t['type'] == 'expense']
             
@@ -988,7 +988,7 @@ class ExpensesPage(BasePage):
 
 class BudgetPage(BasePage):
     def __init__(self):
-        super().__init__("Budget Management System", "Set limits per transactional category.")
+        super().__init__("My Budget Goals", "Set a limit and keep your spending on track!")
         self.init_ui()
 
     def init_ui(self):
@@ -1094,12 +1094,12 @@ class BudgetPage(BasePage):
 
 class LedgerPage(BasePage):
     def __init__(self):
-        super().__init__("Universal Financial Ledger", "Double-entry style audit trail of all transactions.")
+        super().__init__("All Transactions", "A ledger of all your revenues and spending!")
         self.init_ui()
 
     def init_ui(self):
         filter_layout = QHBoxLayout()
-        filter_layout.addWidget(make_label("Audit Ledger Trail Table (Sorted Chronologically)", "pageSubtitle"))
+        filter_layout.addWidget(make_label("Transaction list(sorted by date)", "pageSubtitle"))
         self.layout.addLayout(filter_layout)
 
         # Full Ledger Transaction Table
