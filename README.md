@@ -1,14 +1,14 @@
 # 💸Budget Assist
-<img width="1528" height="783" alt="image" src="https://github.com/user-attachments/assets/8368c0b3-abca-4b83-b3fe-f64b3b9113d0" />
+<img width="1528" height="783" alt="image" src="https://github.com/user-attachments/assets/8368c0b3-abca-4b83-b3fe-f64b3b9113d0" />  
 
 ## 📦Installation & Setup
 Make sure you have python installed.  
-Download the python library "PyQt6", to do so run "pip install PyQt6" in your terminal window.  
+Download the python library "PyQt6", to download it enter ```pip install PyQt6``` in your terminal window.  
 Create a folder on your device and download the files: "main.py" and "database.py" onto that folder.  
-## Using the app
-Either first change directory on your terminal to the folder where you downloaded the files for the expense tracker and then run "python main.py"
+## 🚀Getting Started
+Either first change directory on your terminal to the folder where you downloaded the files for Budget Assist and then enter ```python main.py``` on your terminal
 OR
-open "main.py" in an IDE and run it from there.
+open "main.py" in an IDE(like VS Code) and run it from there.  
 ## ✨Features
 - Add spending and income
 - (Sub)Categories
@@ -20,9 +20,9 @@ open "main.py" in an IDE and run it from there.
 - Net worth over time graph
 - Sort by date, amount
 - Filter by category, date
-- Set a spending limit using Budget
+- Set a spending limit using Budget  
 ## 🛠️Tech Stack
 **Language:** Python 3.6+  
 **GUI Framework:** PyQt6(Qt6 Toolkit)  
 **Data Visualisation:** PyQt6.QtCharts  
-**Database:** SQLite3
+**Database:** SQLite3  
